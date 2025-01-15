@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
               <MapPin className="h-8 w-8 text-blue-600" />
-              <span className="font-bold text-xl">Destify.AI</span>
+              <span className="font-bold text-xl text-gray-700">Destify.AI</span>
             </Link>
             <p className="text-gray-600">
               Discover amazing destinations with AI-powered recommendations
@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
+            <h3 className="font-semibold text-lg mb-4  text-gray-700">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/destinations" className="text-gray-600 hover:text-blue-600">
@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold text-lg mb-4">Contact</h3>
+            <h3 className="font-semibold text-lg mb-4  text-gray-700">Contact</h3>
             <ul className="space-y-2">
               <li className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 text-gray-400" />
@@ -53,7 +53,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold text-lg mb-4">Follow Us</h3>
+            <h3 className="font-semibold text-lg mb-4  text-gray-700">Follow Us</h3>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-blue-600">
                 <Instagram className="h-6 w-6" />

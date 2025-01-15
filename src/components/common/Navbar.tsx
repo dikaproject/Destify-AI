@@ -58,10 +58,10 @@ const Navbar = () => {
             </Link>
 
             <div className="flex items-center space-x-8">
-              {['Destinations', 'AI Recommendations', 'About'].map((item) => (
+              {['Home', 'Destinations', 'AI Recommendations', 'About'].map((item) => (
                 <Link
                   key={item}
-                  href={`/${item.toLowerCase().replace(' ', '-')}`}
+                  href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
                   className="relative group"
                 >
                   <span className="text-gray-700 group-hover:text-blue-600 transition-colors">
