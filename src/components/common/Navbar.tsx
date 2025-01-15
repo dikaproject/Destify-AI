@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { 
-  MapPin, 
-  Search, 
-  Compass, 
-  User, 
-  Home
-} from 'lucide-react';
+    MapPin, 
+    Home,
+    Navigation,
+    Bot,
+    Info
+  } from 'lucide-react';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -25,9 +25,9 @@ const Navbar = () => {
 
   const mobileNavItems = [
     { icon: <Home size={24} />, label: 'Home', href: '/' },
-    { icon: <Search size={24} />, label: 'Explore', href: '/explore' },
-    { icon: <Compass size={24} />, label: 'Discover', href: '/discover' },
-    { icon: <User size={24} />, label: 'Profile', href: '/profile' },
+    { icon: <Navigation size={24} />, label: 'Explore', href: '/destinations' },
+    { icon: <Bot size={24} />, label: 'AI Chat', href: '/ai-recommendations' },
+    { icon: <Info size={24} />, label: 'About', href: '/about' },
   ];
 
   return (
@@ -89,34 +89,55 @@ const Navbar = () => {
         animate={{ y: 0 }}
         className="fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-xl border-t border-gray-200/20 md:hidden z-50"
       >
-        <div className="flex justify-around items-center h-16 px-4">
+        <div className="flex justify-around items-center h-20 px-4">
           {mobileNavItems.map((item, index) => (
             <Link
               key={index}
               href={item.href}
-              className={`relative flex flex-col items-center space-y-1 transition-colors duration-200 ${
+              className={`relative flex flex-col items-center space-y-1.5 px-4 py-2 transition-all duration-300 ${
                 pathname === item.href 
                   ? 'text-blue-600' 
-                  : 'text-gray-500 hover:text-gray-700'
+                  : 'text-gray-500 hover:text-blue-500'
               }`}
             >
               <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ 
+                  scale: 1.1,
+                  y: -2 
+                }}
+                whileTap={{ 
+                  scale: 0.95,
+                  y: 1 
+                }}
                 className="relative"
               >
                 {pathname === item.href && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute -inset-2 bg-blue-100/50 rounded-lg"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    className="absolute -inset-3 bg-blue-100/60 rounded-xl"
+                    transition={{ 
+                      type: "spring", 
+                      bounce: 0.2, 
+                      duration: 0.6 
+                    }}
                   />
                 )}
-                {item.icon}
+                <motion.div
+                  whileHover={{
+                    rotate: [0, -10, 10, -5, 5, 0],
+                    transition: { duration: 0.5 }
+                  }}
+                >
+                  {item.icon}
+                </motion.div>
               </motion.div>
-              <span className="text-xs font-medium">{item.label}</span>
+              <span className="text-xs font-medium tracking-wide">{item.label}</span>
               {pathname === item.href && (
-                <span className="absolute -bottom-1 left-1/2 w-1 h-1 bg-blue-600 rounded-full transform -translate-x-1/2" />
+                <motion.span
+                  layoutId="activeIndicator"
+                  className="absolute -bottom-1 left-1/2 w-1.5 h-1.5 bg-blue-600 rounded-full transform -translate-x-1/2"
+                  transition={{ duration: 0.3 }}
+                />
               )}
             </Link>
           ))}

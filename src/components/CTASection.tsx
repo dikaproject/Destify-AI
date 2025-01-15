@@ -10,7 +10,7 @@ const samplePrompts = [
 
 const CTASection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-blue-50/30 to-white">
+    <section className="py-28 md:py-20 mb-20 md:mb-0 bg-gradient-to-b from-blue-50/30 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left: AI Chat Demo */}
