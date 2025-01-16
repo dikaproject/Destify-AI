@@ -8,7 +8,8 @@ import {
     Home,
     Navigation,
     Bot,
-    Info
+    Info,
+    User
   } from 'lucide-react';
 
 const Navbar = () => {
@@ -28,6 +29,7 @@ const Navbar = () => {
     { icon: <Navigation size={24} />, label: 'Explore', href: '/destinations' },
     { icon: <Bot size={24} />, label: 'AI Chat', href: '/destifyai' },
     { icon: <Info size={24} />, label: 'About', href: '/about' },
+    { icon: <User size={24} />, label: 'Account', href: '/login' }, // Changed label to 'Account'
   ];
 
   return (
