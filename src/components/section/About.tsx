@@ -104,7 +104,7 @@ const About = () => {
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
           <p className="text-gray-600 mb-8">
-            Have questions? We'd love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
+            Have questions? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
           </p>
           <button className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full hover:opacity-90 transition-opacity">
             Contact Us
