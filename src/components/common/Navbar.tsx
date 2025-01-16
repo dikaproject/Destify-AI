@@ -26,7 +26,7 @@ const Navbar = () => {
   const mobileNavItems = [
     { icon: <Home size={24} />, label: 'Home', href: '/' },
     { icon: <Navigation size={24} />, label: 'Explore', href: '/destinations' },
-    { icon: <Bot size={24} />, label: 'AI Chat', href: '/ai-recommendations' },
+    { icon: <Bot size={24} />, label: 'AI Chat', href: '/destifyai' },
     { icon: <Info size={24} />, label: 'About', href: '/about' },
   ];
 
@@ -58,7 +58,7 @@ const Navbar = () => {
             </Link>
 
             <div className="flex items-center space-x-8">
-              {['Home', 'Destinations', 'AI Recommendations', 'About'].map((item) => (
+              {['Home', 'Destinations', 'DestifyAI', 'About'].map((item) => (
                 <Link
                   key={item}
                   href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
