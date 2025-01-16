@@ -11,7 +11,7 @@ const stats = [
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50/50 via-white to-white">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50/50 via-white to-white pb-36 md:pb-0">
       {/* Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-100 rounded-full blur-3xl opacity-30" />
