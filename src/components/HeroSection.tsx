@@ -49,11 +49,11 @@ const HeroSection = () => {
                 <MapPin className="h-6 w-6 text-blue-500 ml-4" />
                 <input
                   type="text"
-                  placeholder="Where do you want to go?"
-                  className="w-full outline-none text-gray-700"
+                  placeholder="Search destination..."
+                  className="w-full outline-none text-gray-700 pr-2 sm:pr-0 placeholder:text-sm sm:placeholder:text-base"
                 />
               </div>
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full hover:opacity-90 transition-all duration-200 shadow-md">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 sm:px-8 py-3 rounded-full hover:opacity-90 transition-all duration-200 shadow-md whitespace-nowrap">
                 Explore Now
               </button>
             </div>
