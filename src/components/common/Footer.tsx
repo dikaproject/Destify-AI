@@ -70,6 +70,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-gray-200 text-center text-gray-600">
           <p>&copy; {new Date().getFullYear()} Destify.AI. All rights reserved.</p>
+          <p>Rasya Dika Pratama - Fullstack Developer</p>
         </div>
       </div>
     </footer>
